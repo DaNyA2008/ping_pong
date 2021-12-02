@@ -25,8 +25,8 @@ class Wall(sprite.Sprite):
         window.blit(self.image, (self.rect.x, self.rect.x))
 
 
-wall1 = Wall(166, 219, 8, 15, 220, 180, 80)
-wall2 = Wall(255, 0, 1, 15, 430, 150, 150)
+wall1 = Wall(16, 213, 53, 15, 220, 220, 400)
+wall2 = Wall(16, 213, 53, 15, 220, 50, 120)
 wall1.draw_wall()
 wall2.draw_wall()
 
@@ -38,8 +38,9 @@ while game:
         if e.type == QUIT:
             game = False
 
+    window.blit(background, (0, 0))
     wall1.draw_wall()
     wall2.draw_wall()
 
-    window.blit(background, (0, 0))
+    
     display.update()
